@@ -1,0 +1,8 @@
+apiVersion: dolevgroup.okto.io/v1alpha1
+kind: DolevOp
+metadata:
+  name: example-dolevop
+spec:
+  # Add fields here
+  name: Dolev
+  message: Hello All!

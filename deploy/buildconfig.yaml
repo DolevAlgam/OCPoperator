@@ -1,0 +1,21 @@
+kind: "BuildConfig"
+apiVersion: "build.openshift.io/v1"
+metadata:
+  name: opdolev
+  namespace: newdolev
+spec:
+  runPolicy: "Serial"
+  source:
+    git:
+      uri: git@github.com:DolevAlgam/OCPoperator.git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: "DockerImage"
+        name: "docker.io/dimssss/golang-s2i:0.5"
+  output:
+    to:
+      kind: "DockerImage"
+      name: "${IMAGE}:${VERSION}"
+    pushSecret:
+      name: ${PUSH_SECRET}

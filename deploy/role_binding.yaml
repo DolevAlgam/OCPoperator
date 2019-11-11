@@ -1,0 +1,11 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: opdolev
+subjects:
+- kind: ServiceAccount
+  name: opdolev
+roleRef:
+  kind: Role
+  name: opdolev
+  apiGroup: rbac.authorization.k8s.io
