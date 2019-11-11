@@ -1,9 +1,0 @@
-#!/bin/ash
-set -x
-mv /tmp/src /go/src/opdolev
-cd /go/src/opdolev
-export GO111MODULE=on
-echo "Building sources..."
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -x -o /go/bin/opdolev -mod vendor cmd/manager/main.go
-rm -fr /go/src/opdolev
-ls -all /go/bin
