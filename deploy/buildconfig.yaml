@@ -7,7 +7,7 @@ spec:
   runPolicy: "Serial"
   source:
     git:
-      uri: git@github.com:DolevAlgam/OCPoperator.git
+      uri: "https://github.com/DolevAlgam/OCPoperator.git"
   strategy:
     sourceStrategy:
       from:
@@ -16,6 +16,6 @@ spec:
   output:
     to:
       kind: "DockerImage"
-      name: "${IMAGE}:${VERSION}"
+      name: "docker.io/dolevalgam/dolevopocp:latest"
     pushSecret:
-      name: ${PUSH_SECRET}
+      name: dolevsecret3
